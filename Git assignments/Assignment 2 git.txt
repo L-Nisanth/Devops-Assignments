@@ -1,0 +1,110 @@
+                                          ASSIGNMENT-2
+Tasks To Be Performed:
+1. Create a Git working directory with feature1.txt and feature2.txt in the
+master branch
+2. Create 3 branches develop, feature1 and feature2
+3. In develop branch create develop.txt, do not stage or commit it
+4. Stash this file and check out to feature1 branch
+5. Create new.txt file in feature1 branch, stage and commit this file
+6. Checkout to develop, unstash this file and commit
+
+==============================^^^^^^^^^^^^^^^^^^^^=====================================
+
+1) command: mkdir assignment2
+   command: cd assignment2
+   command: git init
+  
+           RESULT :
+               Initialized empty Git repository in /home/ubuntu/assignment2/.git/
+   
+   command: touch feature1.txt feature2.txt 
+          
+           RESULT:
+                  No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        feature1.txt
+        feature2.txt
+
+   command: git add .
+   command: git commit -m "added feature1.txt and feature2.txt to master"
+      
+        
+         
+
+2) command: git branch develop
+   command: git branch feature1
+   command: git branch feature2
+   command: git branch
+    
+      RESULT:
+            develop
+            feature1
+            feature2
+            * master
+
+
+3)  command: git checkout develop
+
+      RESULT:
+        Switched to branch 'develop'
+
+    command: touch develop.txt
+    command: git status
+      
+      RESULT:
+      On branch develop
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        develop.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+
+4)   command: git stash -u
+     command: git status
+      
+        RESULT:
+     On branch develop
+     nothing to commit, working tree clean
+     
+     command: git checkout feature1
+
+        RESULT
+       Switched to branch 'feature1'
+
+
+5)     command: touch new.txt
+       command: git add new.txt
+       command: git commit -m "adding new.txt to feature1 branch"
+
+
+
+6)   command: git checkout develop
+     command: git stash pop
+       
+      RESULT:
+     On branch develop
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        develop.txt
+
+     command: git add develop.txt
+     command: git commit -m "committing develop.txt in develop branch"
+
+
+     
+
+ 
+     
+
+
+
+     
+
+      
+  
+
+

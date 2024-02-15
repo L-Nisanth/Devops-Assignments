@@ -1,0 +1,69 @@
+                                          ASSIGNMENT-5
+
+Tasks To Be Performed:
+1. Create a Git Flow workflow architecture on Git
+2. Create all the required branches
+3. Starting from the feature branch, push the branch to the master, following
+the architecture
+4. Push a urgent.txt on master using hotfix
+
+
+==============================^^^^^^^^^^^^^^^^^^^^=====================================
+
+1) command: git flow init
+
+
+2) command: git flow feature start feature
+   command: git flow release start release
+   command: git flow hotfix start hotfix
+
+3) command: git checkout feature/feature
+   command: touch feature.txt && git add . && git commit -m "added feature.txt"
+   command: git flow feature finish feature
+
+RESULT:
+Switched to branch 'develop'
+Updating 20a4ea8..0c63801
+Fast-forward
+ feature.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 feature.txt
+Deleted branch feature/feature (was 0c63801).
+
+Summary of actions:
+- The feature branch 'feature/feature' was merged into 'develop'
+- Feature branch 'feature/feature' has been locally deleted
+- You are now on branch 'develop'
+
+
+
+4) command: git checkout hotfix/hotfix
+   command: touch urgent.txt && git add . && git commit -m "added urgent.txt in hotflix"
+   command: git flow hotfix finish hotfix
+
+RESULT:
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 urgent.txt
+ubuntu@ip-172-31-45-16:~/gitfloww$ git flow hotfix finish hotfix
+Switched to branch 'master'
+Merge made by the 'ort' strategy.
+ urgent.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 urgent.txt
+Switched to branch 'develop'
+Merge made by the 'ort' strategy.
+ urgent.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 urgent.txt
+Deleted branch hotfix/hotfix (was 3206665).
+
+Summary of actions:
+- Hotfix branch 'hotfix/hotfix' has been merged into 'master'
+- The hotfix was tagged 'hotfix'
+- Hotfix tag 'hotfix' has been back-merged into 'develop'
+- Hotfix branch 'hotfix/hotfix' has been locally deleted
+- You are now on branch 'develop'
+
+   
+
+

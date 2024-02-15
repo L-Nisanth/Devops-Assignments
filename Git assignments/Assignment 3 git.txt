@@ -1,0 +1,111 @@
+                                          ASSIGNMENT-3
+
+Tasks To Be Performed:
+1. Create a Git working directory, with the following branches:
+● Develop
+● F1
+● f2
+2. In the master branch, commit main.txt file
+3. Put develop.txt in develop branch, f1.txt and f2.txt in f1 and f2 respectively
+4. Push all these branches to GitHub
+5. On local delete f2 branch
+6. Delete the same branch on GitHub as well
+
+==============================^^^^^^^^^^^^^^^^^^^^=====================================
+
+1) command: git branch develop
+   command: git branch f1
+   command: git branch f2
+   command: git status
+   
+RESULT:
+  develop
+  f1
+  f2
+* master
+
+
+2)  command: touch main.txt && git add main.txt && git commit -m "committed main.txt in master"
+
+
+3) command: git checkout develop && touch develop.txt && git add develop.txt && git commit -m "added develop.txt in develop branch"
+   command: git checkout f1 && touch f1.txt && git add f1.txt && git commit -m "added f1.txt in f1 branch" 
+   command: git checkout f2 && touch f2.txt && git add f2.txt && git commit -m "added f2.txt in f2 branch"
+
+
+4) command: git checkout develop
+   command: git push origin develop
+   
+Result on git :
+     Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (7/7), 590 bytes | 590.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+remote:
+remote: Create a pull request for 'develop' on GitHub by visiting:
+ * [new branch]      develop -> develop
+
+Result on GITHUB:
+"develop had recent pushes 3 minutes ago"
+
+   command: git checkout f1
+   command: git push origin f1
+
+Result on GITHUB:
+f1 had recent pushes 1 minutes ago"
+
+   command: git checkout f2
+   command: git push origin f2
+
+Result on GITHUB:
+f2 had recent pushes 30 seconds ago"
+
+
+5) command: git branch
+
+RESULT:
+  develop
+  f1
+* f2
+  master
+
+   command: git checkout master
+   command: git branch -d f2
+
+RESULT:
+error: The branch 'f2' is not fully merged.
+If you are sure you want to delete it, run 'git branch -D f2'.
+
+   command: git branch -D f2
+
+RESULT:
+Deleted branch f2 
+
+   command: git branch
+
+RESULT:
+  develop
+  f1
+* master
+
+
+6) login github and go to the specific repository
+   click branches
+   go to active branches and click the delete icon near f2 branch
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
